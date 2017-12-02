@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Encuesta</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">	
+	<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+	
+</head>
+<body >
+<div id="rootVueEncuestas">
+<header>		
+	<nav class="navbar navbar-inverse navbar-fixed-top colorNav " role="navigation" id="barraNav">
+			<div class="container-fluid">
+			    <div class="navbar-header" >			    			      	
+			      	<a class="navbar-brand" href="#">Comunidad Gobierno</a>
+			    </div>			    
+			    <ul class="nav navbar-nav navbar-right">			      	
+			      	<li class="dropdown">
+				        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Opciones
+				        <span class="caret"></span></a>
+				        <ul class="dropdown-menu">
+				          <li><a href="#"><span class="glyphicon glyphicon-refresh"></span> Cambiar Contraseña</a></li>
+				          <li><a href="#"><span class="glyphicon glyphicon-off"></span> Salir</a></li>				        
+				        </ul>
+				      </li>	
+			    </ul>
+			</div>
+		</nav>
+</header>
+	
+<section>
+
+	<div class="divBarra"><label class="tituloEncuesta letra"><img src="../img/icono-encuesta.png" class="iconoEncuesta"> Encuesta:</label></div>
+
+	<div class="divEncuesta">
+		<div class="col-sm-offset-1 col-sm-5 encabezadoEncuesta enc1" >
+			<center><h4 class="letra">Pregunta</h4></center>
+		</div>
+		<div class=" col-sm-5 encabezadoEncuesta enc2" >
+			<center><h4 class="letra"> Respuesta</h4></center>
+		</div>
+
+
+		<center>
+			<div class="col-sm-12" v-for="item in listsPreguntas" >
+
+					<div class="divPregunta justificado col-sm-offset-1  col-sm-5" >{{ item.pregunta}}</div>				
+					<div class="divPregunta pre2 justificado col-sm-5" >{{ item.respuesta }}</div>
+			</div>
+		</center>
+	</div>
+</section>  
+
+
+
+
+<footer class="col-xs-12 footer">
+		<center><img src="../img/bannerLogos.jpg" class="imagenFooter"></center>
+	</footer>
+	<footer class="col-xs-12 footer2">
+		<center><p class="textoFooter">CopyRight 2017 © | Todos los derechos reservado</p></center>
+	</footer>
+	
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="../js/vue.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.3.4/vue-resource.min.js"></script>
+  	<script src="../js/JSEncuestas.js"></script>
+
+</body>
+</html>

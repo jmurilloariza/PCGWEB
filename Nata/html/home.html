@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../js/cookies.js"></script>
+	<script>
+		if(!checkCookie("token")){
+			window.location.replace("../html/ciudadano.html")
+		}
+	</script>
+	<title>Home</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">	
+	<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+</head >
+<body onunload="deleteCookie('token')">
+<div id="rootVueHome">
+<header>
+		<nav class="navbar navbar-inverse navbar-fixed-top colorNav " role="navigation" id="barraNav">
+			<div class="container-fluid">
+			    <div class="navbar-header">			    
+			      	<a class="navbar-brand" href="#">Comunidad Gobierno</a>
+			    </div>
+			    <ul class="nav navbar-nav">
+				    <li class="efectoMenu" ><a href="reportes.html"><span class="glyphicon glyphicon-list-alt"></span> Reportes</a></li>				    
+			    </ul>
+			    <ul class="nav navbar-nav navbar-right">			      	
+			      	<li class="dropdown">
+				        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Opciones
+				        <span class="caret"></span></a>
+				        <ul class="dropdown-menu">
+				          <li><a href="#"><span class="glyphicon glyphicon-refresh"></span> Cambiar Contraseña</a></li>
+				          <li><a href="#"><span class="glyphicon glyphicon-off"></span> Salir</a></li>				      </ul>
+				      </li>	
+			    </ul>
+			</div>
+		</nav>
+	</header>
+	<div class="divBarra"></div>
+	
+	<section class="margenSuperiorBarra3">	
+		<div class="col-xs-offset-1 col-xs-10 divProyectosActivos">
+			<center><h1 class="Legend margenInferior">Proyectos Activos Comunidad Gobierno</h1></center>
+		  	<div class="row">
+			  	<div class="col-xs-offset-3 col-xs-6">
+			    	<div class="form-group">
+			    	<label><span class="glyphicon glyphicon-search"></span>  Seleccione una opción de busqueda:</label>
+			      		<select  v-model="proyectoselect" id="select1" class="selectpicker form-control" v-on:change="crearComboAnidado()">
+			        		<option value="0">Seleccione una opcion</option>
+			        		<option value="1">Supervisor</option>
+			        		<option value="2">Fechas</option>
+			        		<option value="3">Comuna</option>
+			        		<option value="4">Nombre</option>
+			      		</select>
+
+			      		<template v-if="proyectoselect==1">
+			      		<h5>Seleccione El Supervisor:</h5>
+			      		</template>
+			      		<template v-if="proyectoselect==2">
+			      			<h5>Seleccione Un Rango de Fechas:</h5>
+			      		</template>
+			      		<template v-if="proyectoselect==3">
+			      			<h5>Seleccione La Comuna:</h5>
+			      		</template>
+			      		<template v-if="proyectoselect==4">
+			      			<h5>Seleccione El Nombre del Proyecto:</h5>
+			      		</template>
+
+			    	</div>
+			  	</div>
+			</div>
+			<div class="row">
+			  	<div class="col-xs-offset-3 col-xs-6">
+			    	<div class="form-group">
+			      		<select id="select2" @change="getUsers()" class="selectpicker form-control" >
+							<option>---</option>
+			      			<option>Supervisor 1</option>
+							<option>Supervisor 2</option>
+							<option>Supervisor 3</option>
+			      		</select>
+			      		<div id="fechas" class="col-xs-12">
+				      		<div class="col-xs-6"><input type="date" name="fecha" id="fecha1" class="form-control ocultar"></div>
+				      		<div class="col-xs-6"><input type="date" name="fecha" id="fecha2" class="form-control ocultar"></div>
+				      		{{$data}}	
+			      		</div>
+			      		
+			    	</div>
+			  	</div>
+			</div>
+
+		
+
+		<center><div class="anchoDivProyectos">
+			<ul class="list-group ">
+				<a class="active list-group-item ocultar letra letraGrande" id="listadoProyectos">Proyectos Activos</a>
+				<a v-for="item in lists" class="list-group-item" href="proyectos.html">
+					{{ item.name.first}} {{ item.name.last}}
+				</a>
+			</ul>
+		</div></center>
+
+
+			</div>	
+		</div>
+		
+	</section> 
+
+	<footer class="col-xs-12 footer">
+		<center><img src="../img/bannerLogos.jpg"  class="imagenFooter"></center>
+	</footer>
+	<footer class="col-xs-12 footer2">
+		<center><p class="textoFooter">CopyRight 2017 © | Todos los derechos reservado</p></center>
+	</footer> 
+	
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="../js/vue.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.3.4/vue-resource.min.js"></script>
+  	<script src="../js/JSHome.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Proyecto</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">	
+	<link href="https://fonts.googleapis.com/css?family=Exo+2" rel="stylesheet">
+
+		
+	
+</head>
+<body>	
+<div id="rootVueProyecto">
+	<header>
+		<nav class="navbar navbar-inverse navbar-fixed-top colorNav " role="navigation" id="barraNav">
+			<div class="container-fluid">
+			    <div class="navbar-header">			    
+			      	<a class="navbar-brand" href="#">Comunidad Gobierno</a>
+			    </div>
+			    <ul class="nav navbar-nav">
+				    <li class="efectoMenu" ><a href="reportes.html"><span class="glyphicon glyphicon-pencil"></span> Reportes</a></li>
+				    <li class="efectoMenu" ><a href="#" data-toggle="modal" data-target="#ModalNotificar" ><span class="glyphicon glyphicon-envelope"></span> Notificar</a></li></ul>
+			    <ul class="nav navbar-nav navbar-right">			      	
+			      	<li class="dropdown">
+				        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Opciones
+				        <span class="caret"></span></a>
+				        <ul class="dropdown-menu">
+				          <li><a href="#"><span class="glyphicon glyphicon-refresh"></span> Cambiar Contraseña</a></li>
+				          <li><a href="#"><span class="glyphicon glyphicon-off"></span> Salir</a></li>				        
+				        </ul>
+				      </li>	
+			    </ul>
+			</div>
+		</nav>
+	</header>
+
+	<section class="margenSuperiorBarra">
+		<div class="col-xs-3">
+
+<!--BARRA DE PROGRESO CIRCULAR-->				
+			<center><div class="margen1" id="inputPorcentaje"></div></center>
+
+			<div class="list-group">
+			  	<a href="#" class="list-group-item active">Datos del Proyectos</a>
+			  	<a href="#" class="list-group-item" ><label>Dirección:</label>calle 0 #4n-18 </a>
+			  	<a href="#" class="list-group-item" ><label>Comuna:</label>comuna 7 </a>
+			  	<a href="#" class="list-group-item" ><label>Barrio:</label>chapinero </a>
+			  	<a href="#" class="list-group-item" ><label>Nombre del Interventor:</label> Gerson Barrera</a>
+			  	<a href="#" class="list-group-item" ><label>Representante del comite:</label>Victor Gamboa</a>
+			  	<a href="#" class="list-group-item" ><label>Ubicación en el mapa:</label>latitud 35 longitud 34</a>				
+			  	<a href="#" class="list-group-item" ><label>Longitud de la obra:</label>7 metros</a>	
+			  	<a href="#" class="list-group-item" ><label>Ancho de la obra:</label>2 metros</a>	
+			  	<a href="#" class="list-group-item" ><label>Fecha de inicio:</label>18/12/2016</a>	
+			  	<a href="#" class="list-group-item" ><label>Fecha de fin:</label>18/12/2017</a>	
+			  	<a href="#" class="list-group-item" ><label>Cantidad de cemento:</label>100 bolsas</a>	
+			  	<a href="#" class="list-group-item" ><label>Cantidad de triturado:</label> 35 sacos</a>
+			  	<a href="#" class="list-group-item" ><label>Cantidad de arena:</label> 37 sacos</a>
+
+
+			  				  	
+			</div>	
+		</div>
+		
+		<div class="col-xs-9 fondoDetallesProyecto" >
+			<center ><h1 class="letra margenInferior">Proyecto en algun lugar de cucuta</h1></center>
+		  	<article class="col-xs-12 margen1" >
+		  		<div class="col-xs-6">
+		  			<center>
+		  				<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBV9sH_JH389H2UhGl-2m3S2c86K00Z4WIC62kAX6DNd8cZIEWXQ">	
+		  			</center>
+		  		</div>
+		  		
+		  		<p class="col-xs-6 justificado letraGrande letra">Loren Ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+		  		tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+		  		quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+		  		consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+		  		cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+		  		proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		  	</article>
+
+		  	<div class="col-xs-12">
+		  		<div class="table-responsive">
+		  			<table class="table table-fixed table-striped table-hover" id="avances">
+		  				<thead>
+		  					<tr>
+		  						<th class="encabezadoTabla">Avances</th>
+		  					</tr>
+		  				</thead>
+		  				<tbody class="bodyTabla">
+		  					<tr>
+		  						<td class="cursor" data-toggle="modal" data-target="#ModalAvance">
+		  							<a>Nombre del Avance 1</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor" data-toggle="modal" data-target="#ModalAvance">
+		  							<a>Nombre del Avance 2</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor"  data-toggle="modal" data-target="#ModalAvance">
+		  							<a >Nombre del Avance 3</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor" data-toggle="modal" data-target="#ModalAvance">
+		  							<a >Nombre del Avance 4</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor" data-toggle="modal" data-target="#ModalAvance">
+		  							<a >Nombre del Avance 5</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor" data-toggle="modal" data-target="#ModalAvance">
+		  							<a >Nombre del Avance 6</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor" data-toggle="modal" data-target="#ModalAvance">
+		  							<a >Nombre del Avance 7</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor" data-toggle="modal" data-target="#ModalAvance">
+		  							<a >Nombre del Avance 9</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor" data-toggle="modal" data-target="#ModalAvance">
+		  							<a >Nombre del Avance 10</a>
+		  						</td>
+		  					</tr>		  					
+		  				</tbody>
+		  			</table>
+		  		</div>
+		  	</div>
+
+		  	<div class="col-xs-12">
+		  		<div class="table-responsive">
+		  			<table class="table table-fixed table-striped table-hover" id="encuestas">
+		  				<thead>
+		  					<tr>
+		  						<th class="encabezadoTabla">Encuestas</th>
+		  					</tr>
+		  				</thead>
+		  				<tbody class="bodyTabla">
+		  					<tr>
+		  						<td class="cursor">
+		  							<a>Nombre de la encuesta 1</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor">
+		  							<a>Nombre de la encuesta 1</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor">
+		  							<a>Nombre de la encuesta 1</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor">
+		  							<a>Nombre de la encuesta 1</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor">
+		  							<a>Nombre de la encuesta 1</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor">
+		  							<a>Nombre de la encuesta 1</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor">
+		  							<a>Nombre de la encuesta 1</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor">
+		  							<a>Nombre de la encuesta 1</a>
+		  						</td>
+		  					</tr>
+		  					<tr>
+		  						<td class="cursor">
+		  							<a>Nombre de la encuesta 1</a>
+		  						</td>
+		  					</tr>		  					
+		  				</tbody>
+		  			</table>
+		  		</div>
+		  	</div>
+
+		</div>
+</section>  
+
+<!--MODAL PARA MOSTRAR INFORMACION DEL AVANCE DEL PROYECTO-->
+
+<div id="ModalAvance" class="modal fade " role="dialog">
+  <div class="modal-dialog modal-lg">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Avance</h4>
+      </div>
+      <div class="modal-footer fondoModalColor">
+
+      <!--CAROUSEL-->
+	<center>
+		<div id="myCarousel" class="carousel slide estiloSlider " data-ride="carousel">
+		  <ol class="carousel-indicators">
+		    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		    <li data-target="#myCarousel" data-slide-to="1"></li>
+		    <li data-target="#myCarousel" data-slide-to="2"></li>
+		  </ol>
+
+		  <div class="carousel-inner">
+		    <div class="item active">
+		      <img class="bannerizq" src="https://firebasestorage.googleapis.com/v0/b/moviles-clase.appspot.com/o/image-1156254074?alt=media&token=156fa67f-2cd2-4126-a0e8-c6419cd57444" >
+		     
+		    </div>
+
+		    <div class="item">
+		      <img class="bannerizq" src="../img/descarga1.jpg" >
+		       
+		    </div>
+
+		    <div class="item">
+		      <img class="bannerizq" src="../img/descarga1.jpg" >
+		       
+		    </div>
+		  </div>
+
+		 <!-- controles izquierda - derecha-->
+		  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+		    <span class="glyphicon glyphicon-chevron-left"></span>
+		    <span class="sr-only">Anterior</span>
+		  </a>
+		  <a class="right carousel-control" href="#myCarousel" data-slide="next">
+		    <span class="glyphicon glyphicon-chevron-right"></span>
+		    <span class="sr-only">Siguiente</span>
+		  </a>
+		</div>
+	</center>
+
+	<!--Contenidos del avance-->	
+      <div class="col-sm-12 letra">
+        <div class=" col-sm-offset-1 col-sm-5 well ">
+        	<h4><strong>Descripción:</strong></h4>
+        	<p>Esta es la descripcion es del proyecto 1</p>
+        </div>
+        <div class="col-sm-5 well linea">
+        	<h4><strong>Fecha de Reporte:</strong></h4>
+        	<p>18 de diciembre del 2016</p>
+        </div>
+      </div>
+      <div class=" col-sm-offset-1 col-sm-10 well letra">
+      	<h4 ><strong>Observaciones:</strong></h4>
+      	<p>Estas observciones son de pruebas.</p>
+      </div>
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+
+<!-- MODAL PARA LOS NOTIFICAR-->
+
+<div id="ModalNotificar" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Notificar:</h4>
+      </div>
+      <div class="modal-body fondoModalColor" >
+      <center>      
+        <form class="form-horizontal formNotificar" action="home.html" >
+			  <div class="form-group">			  
+			    <label class="control-label col-sm-2 "  >Asunto:</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" id="asunto" placeholder="Ingrese un Asunto">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label class="control-label col-sm-2 " >Para:</label>
+			    <div class="col-sm-10">
+			      <input type="text" class="form-control" id="asunto">
+			    </div>
+			  </div>
+			  <div class="form-group">
+			    <label class="control-label col-sm-2 " >Mensaje:</label>
+ 			    <div class="col-sm-10">
+			      <textarea class="form-control" id="mensaje" rows="6"></textarea>
+			    </div>
+			  </div>
+			  <button class="btn btn-primary">Enviar</button>
+		</form>
+	  </center>
+      </div>     
+    </div>
+
+  </div>
+</div>
+
+
+	<footer class="col-xs-12 footer">
+		<center><img src="../img/bannerLogos.jpg"  class="imagenFooter"></center>
+	</footer>
+	<footer class="col-xs-12 footer2">
+		<center><p class="textoFooter">CopyRight 2017 © | Todos los derechos reservado</p></center>
+	</footer>
+
+</div>
+	
+</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-Knob/1.2.13/jquery.knob.min.js"></script> 
+  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  	<script src="../js/vue.js"></script>
+  	<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.3.4/vue-resource.min.js"></script>
+  	<script src="../js/JSProyectos.js"></script>
+
+
+</body>
+</html>
